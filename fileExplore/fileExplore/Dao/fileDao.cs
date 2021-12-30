@@ -92,5 +92,27 @@ namespace fileExplore.Dao
             }
             return false;
         }
+        public List<fileInfo> Search(string test)
+        {
+            fileInfo file = new fileInfo();
+            List<fileInfo> myList = new List<fileInfo>();
+            var res = elasticClient.Search<fileInfo>(
+                s => s.Index("filedatasearch2")
+                .Query(q => q.MultiMatch(m => m.Fields(d => d
+                .Field("name")
+                .Field("path")
+                .Field("content")
+                )
+                .Query(test))));
+            foreach (var hit in res.Hits)
+            {
+                file.name = hit.Source.name;
+                file.path = hit.Source.path;
+                file.content = hit.Source.content;
+                myList.Add(file);
+            }
+            return myList;
+
+        }
     }
 }
