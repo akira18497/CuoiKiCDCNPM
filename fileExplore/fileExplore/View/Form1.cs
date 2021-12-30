@@ -557,7 +557,19 @@ namespace fileExplore
         // Viết chức năng tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            listView1.Items.Clear();
+            string test = txtFind.Text;
+            var search = dao.Search(test);
+            foreach (var data in search)
+            {
+                ListViewItem item1 = new ListViewItem();
+                item1.Text = data.name;
+                item1.ImageIndex = 0;
+                item1.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = "" });
+                item1.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = "" });
+                item1.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = data.path });
+                listView1.Items.Add(item1);
+            }
         }
 
         private void txtPath_TextChanged(object sender, EventArgs e)
