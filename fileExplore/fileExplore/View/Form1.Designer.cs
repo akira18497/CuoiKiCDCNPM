@@ -1,4 +1,4 @@
-﻿
+
 namespace fileExplore
 {
     partial class Form1
@@ -73,7 +73,7 @@ namespace fileExplore
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.txtPath = new System.Windows.Forms.TextBox();
+            this.txtFind = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtInfo = new System.Windows.Forms.Label();
@@ -422,13 +422,13 @@ namespace fileExplore
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtPath
+            // txtFind
             // 
-            this.txtPath.Location = new System.Drawing.Point(236, 32);
-            this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(337, 20);
-            this.txtPath.TabIndex = 7;
-            this.txtPath.TextChanged += new System.EventHandler(this.txtPath_TextChanged);
+            this.txtFind.Location = new System.Drawing.Point(236, 32);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(337, 20);
+            this.txtFind.TabIndex = 7;
+            this.txtFind.TextChanged += new System.EventHandler(this.txtPath_TextChanged);
             // 
             // label1
             // 
@@ -449,7 +449,7 @@ namespace fileExplore
             // 
             this.panel1.Controls.Add(this.txtInfo);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtPath);
+            this.panel1.Controls.Add(this.txtFind);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 24);
@@ -548,7 +548,7 @@ namespace fileExplore
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
